@@ -23,20 +23,20 @@ switch ($_GET["op"]){
 		$rspta=$categoria->desactivar($idcategoria);
  		echo $rspta ? "Categoría Desactivada" : "Categoría no se puede desactivar";
  		break;
-	break;
+	
 
 	case 'activar':
 		$rspta=$categoria->activar($idcategoria);
  		echo $rspta ? "Categoría activada" : "Categoría no se puede activar";
  		break;
-	break;
+
 
 	case 'mostrar':
 		$rspta=$categoria->mostrar($idcategoria);
  		//Codificar el resultado utilizando json
  		echo json_encode($rspta);
  		break;
-	break;
+
 
 	case 'listar':
 		$rspta=$categoria->listar();
